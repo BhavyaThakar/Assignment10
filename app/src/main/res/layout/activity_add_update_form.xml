@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUpdateForm">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="24sp"
+        android:text="Student Registration Form"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:id="@+id/label_text_formTtl"
+        />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_text_formTtl"
+        tools:ignore="SpeakableTextPresentCheck">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lt_personal_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="5dp"
+                android:text="Personal Details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lt_name"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_personal_details" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_name"
+                app:layout_constraintTop_toBottomOf="@+id/lt_personal_details" />
+
+            <TextView
+                android:id="@+id/lt_email"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_name" />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="abc@xyz.com"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_email"
+                app:layout_constraintTop_toBottomOf="@id/et_name" />
+
+            <TextView
+                android:id="@+id/lt_phone"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Contact No:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_email" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="9876598765"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/lt_phone"
+                app:layout_constraintTop_toBottomOf="@id/et_email" />
+
+            <TextView
+                android:id="@+id/lt_dob"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="DOB"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_phone" />
+
+            <TextView
+                android:id="@+id/tv_dob"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="Date of Birth"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toStartOf="@+id/iv_show_date_picker"
+                app:layout_constraintStart_toEndOf="@+id/lt_dob"
+                app:layout_constraintTop_toBottomOf="@id/et_phone" />
+
+            <ImageView
+                android:id="@+id/iv_show_date_picker"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_baseline_calendar_month_24"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_dob"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_dob" />
+
+
+            <TextView
+                android:id="@+id/lt_qualification"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Qualification:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_dob" />
+
+            <EditText
+                android:id="@+id/et_qualification"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Highest Qualification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_qualification"
+                app:layout_constraintTop_toBottomOf="@+id/tv_dob" />
+
+            <TextView
+                android:id="@+id/lt_school"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="School:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lt_qualification" />
+
+            <EditText
+                android:id="@+id/et_school"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_school"
+                app:layout_constraintTop_toBottomOf="@+id/et_qualification" />
+
+            <TextView
+                android:id="@+id/lt_stream"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Stream:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lt_school" />
+
+            <EditText
+                android:id="@+id/et_stream"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Stream or Department "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_school"
+                app:layout_constraintTop_toBottomOf="@+id/et_school" />
+
+            <TextView
+                android:id="@+id/lt_percentage"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Percentage:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lt_stream" />
+
+            <EditText
+                android:id="@+id/et_percentage"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_stream"
+                app:layout_constraintTop_toBottomOf="@+id/et_stream" />
+
+            <TextView
+                android:id="@+id/lt_gender"
+                android:layout_width="118dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="14dp"
+                android:padding="5dp"
+                android:text="Gender:"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_percentage" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_gender"
+                app:layout_constraintTop_toBottomOf="@+id/et_percentage">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="24dp"
+                    android:onClick="checkedRadioButton"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:onClick="checkedRadioButton"
+                    android:text="Female"
+                    android:textSize="14sp" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lt_parent_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:padding="5dp"
+                android:text="Parent's  Details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_gender" />
+
+            <TextView
+                android:id="@+id/lt_father_name"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Father's Name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_parent_details" />
+
+            <EditText
+                android:id="@+id/et_father_name"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_father_name"
+                app:layout_constraintTop_toBottomOf="@+id/lt_parent_details" />
+
+            <TextView
+                android:id="@+id/lt_fOccupation"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Occupation:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_father_name" />
+
+            <EditText
+                android:id="@+id/et_fOccupation"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Father's occupation"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_fOccupation"
+                app:layout_constraintTop_toBottomOf="@+id/et_father_name" />
+
+            <TextView
+                android:id="@+id/lt_mother_name"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+
+                android:layout_height="wrap_content"
+                android:text="Mother's Name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_fOccupation" />
+
+            <EditText
+                android:id="@+id/et_mother_name"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_mother_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_fOccupation" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Occupation:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_mother_name" />
+
+            <EditText
+                android:id="@+id/et_mOccupation"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Mother's occupation"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/et_mother_name" />
+
+            <TextView
+                android:id="@+id/lt_address"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                style="@style/textViewStyle"
+                android:inputType="textPostalAddress"
+                app:layout_constraintBottom_toBottomOf="@+id/lt_address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lt_address"
+                app:layout_constraintTop_toTopOf="@+id/lt_address" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/textViewStyle"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Contact No:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <EditText
+                android:id="@+id/et_p_phone"
+                style="@style/textViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="9876598765"
+
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/et_mOccupation" />
+
+            <Button
+                android:id="@+id/btn_add_student"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Add"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/bt_update_db"
+                android:backgroundTint="@color/teal_700"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_address" />
+
+            <Button
+                android:id="@+id/bt_update_db"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="updateDatabase"
+                android:text="Update"
+                android:backgroundTint="@color/teal_700"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_add_student"
+                app:layout_constraintTop_toBottomOf="@+id/et_address" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
